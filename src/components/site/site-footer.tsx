@@ -8,7 +8,7 @@ export function SiteFooter() {
       <div className="border-y border-coffee/12 bg-[linear-gradient(90deg,#c7cca9_0%,#b4b993_20%,#8a886f_42%,#575245_62%,#312d26_80%,#18150f_100%)]">
         <div className="mx-auto flex h-10 w-full max-w-[1728px] items-center gap-4 px-4 sm:px-6 md:px-10 lg:px-14 xl:px-20 2xl:px-[200px]">
           <span className="h-[4px] w-[4px] rounded-full bg-clementine" />
-          <Link href="/contact" className="text-[12px] font-serif tracking-[0.01em] text-coffee/95">
+          <Link href="/contact" className="text-[12px] font-serif font-medium tracking-[0.01em] text-coffee/95">
             Request an Introduction +
           </Link>
         </div>

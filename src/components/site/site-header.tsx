@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 type SiteHeaderProps = {
   activePath?: string;
@@ -17,6 +18,9 @@ const primaryNav = [
 
 export function SiteHeader({ activePath = "/" }: SiteHeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const logoRailClass = "flex h-[48px] items-center gap-[12px] pr-8";
+  const logoMarkClass = "flex h-[48px] w-[48px] items-center justify-center border-r border-coffee/6";
+  const requestRailClass = "flex h-[60px] min-w-[272px] items-center border-r border-coffee/6 pl-0 pr-8";
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -36,36 +40,33 @@ export function SiteHeader({ activePath = "/" }: SiteHeaderProps) {
   return (
     <header className="relative bg-paper-white">
       <div className="bg-paper-white">
-        <div className="mx-auto flex h-[60px] w-full max-w-[1728px] items-center justify-between gap-4 border-b border-coffee/6 px-4 sm:px-6 md:gap-8 md:px-10 lg:px-14 xl:px-20 2xl:px-[200px]">
-          <Link href="/" className="flex items-center gap-3 md:border-r md:border-coffee/6 md:pr-8" onClick={closeMenu}>
-            <span className="inline-flex items-end gap-[2px]">
-              <span className="h-3.5 w-[2px] bg-coffee" />
-              <span className="h-4.5 w-[2px] bg-coffee" />
-              <span className="h-5.5 w-[2px] bg-coffee" />
-              <span className="h-4.5 w-[2px] bg-coffee" />
-              <span className="h-3.5 w-[2px] bg-coffee" />
+        <div className="mx-auto flex h-[60px] w-full max-w-[1180px] items-center justify-between gap-4 border-x border-b border-line-soft pl-0 pr-4 sm:pr-6 md:gap-8 md:pr-8">
+          <Link href="/" className={logoRailClass} onClick={closeMenu}>
+            <span className={logoMarkClass}>
+              <Image
+                src="/images/logo1.png"
+                alt="Ladd and Co logo"
+                width={32}
+                height={32}
+                className="h-[32px] w-[32px] object-contain object-center"
+                priority
+              />
             </span>
-            <span className="font-serif text-[17px] leading-none text-coffee md:text-[18px]">
-              Ladd &amp; Co.
-            </span>
+            <span className="font-serif font-bold text-[17px] leading-none text-coffee md:text-[19px]">Ladd &amp; Co.</span>
           </Link>
-
-          <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+          <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
             {primaryNav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-[10px] uppercase tracking-[0.2em] text-coffee/58 transition-colors hover:text-clementine"
+                className="font-mono text-[8px] uppercase tracking-[0.2em] text-coffee/58 transition-colors hover:text-clementine"
               >
                 {item.label}
               </Link>
             ))}
             <Link
               href="/contact"
-              className={[
-                "text-[10px] font-semibold uppercase tracking-[0.2em]",
-                activePath === "/contact" ? "text-clementine" : "text-coffee",
-              ].join(" ")}
+              className={["font-mono text-[8px] font-semibold uppercase tracking-[0.2em]",activePath === "/contact" ? "text-clementine" : "text-coffee",].join(" ")}
             >
               Client Login
             </Link>
@@ -75,7 +76,7 @@ export function SiteHeader({ activePath = "/" }: SiteHeaderProps) {
             type="button"
             aria-expanded={isMenuOpen}
             aria-label="Toggle mobile menu"
-            className="inline-flex h-6 w-6 items-center justify-center md:hidden"
+            className="inline-flex h-6 w-6 items-center justify-center lg:hidden"
             onClick={() => setIsMenuOpen((value) => !value)}
           >
             <span className="relative h-3.5 w-3.5">
@@ -88,31 +89,32 @@ export function SiteHeader({ activePath = "/" }: SiteHeaderProps) {
       </div>
 
       <div className="border-t border-coffee/6 bg-[linear-gradient(90deg,#c5caaa_0%,#d3d8bd_22%,#e4e7d8_55%,#f3f1ef_100%)]">
-        <div className="mx-auto flex h-[44px] w-full max-w-[1728px] items-center gap-[10px] px-4 sm:px-6 md:px-10 lg:px-14 xl:px-20 2xl:px-[200px]">
-          <span className="h-[4px] w-[4px] rounded-full bg-clementine" />
-          <Link href="/contact" className="text-[14px] font-serif text-coffee">
-            Request an Introduction →
-          </Link>
+        <div className="mx-auto flex h-[60px] w-full max-w-[1180px] items-center border-x border-line-soft px-4 sm:px-6 md:px-8">
+          <div className={requestRailClass}>
+            <span className="-ml-[8px] h-[5px] w-[5px] shrink-0 rounded-full bg-clementine" />
+            <span className="h-[32px] w-px bg-coffee/6 mx-4" />
+            <Link href="/contact" className="font-serif font-bold text-[15px] leading-none text-coffee">
+              Request an Introduction →
+            </Link>
+          </div>
         </div>
       </div>
 
       {isMenuOpen ? (
-        <div className="fixed inset-0 z-[70] bg-muted-olive md:hidden">
+        <div className="fixed inset-0 z-[70] bg-muted-olive lg:hidden">
           <div className="h-3 w-full bg-coffee" />
 
           <div className="border-b border-line-soft bg-paper-white">
             <div className="mx-auto flex w-full max-w-[1180px] items-center justify-between gap-4 px-4 py-3 sm:px-6">
-              <Link href="/" className="flex items-center gap-3" onClick={closeMenu}>
-                <span className="inline-flex items-end gap-[2px]">
-                  <span className="h-3.5 w-[2px] bg-coffee" />
-                  <span className="h-4.5 w-[2px] bg-coffee" />
-                  <span className="h-5.5 w-[2px] bg-coffee" />
-                  <span className="h-4.5 w-[2px] bg-coffee" />
-                  <span className="h-3.5 w-[2px] bg-coffee" />
-                </span>
-                <span className="font-serif text-[20px] leading-none text-coffee">
-                  Ladd &amp; Co.
-                </span>
+              <Link href="/" className="-ml-[40px] flex items-center gap-2" onClick={closeMenu}>
+                <img
+                  src="/images/logo1.png"
+                  alt="Ladd and Co logo"
+                  width={22}
+                  height={22}
+                  style={{marginLeft:'-10px',height:'20px',width:'20px',objectFit:'contain',objectPosition:'left'}}
+                />
+                <span className="ml-[28px] font-serif text-[17px] leading-none text-coffee">Ladd &amp; Co.</span>
               </Link>
 
               <button
@@ -130,9 +132,14 @@ export function SiteHeader({ activePath = "/" }: SiteHeaderProps) {
           </div>
 
           <div className="border-t border-coffee/6 bg-[linear-gradient(90deg,#c5caaa_0%,#d3d8bd_22%,#e4e7d8_55%,#f3f1ef_100%)]">
-            <div className="mx-auto flex h-[44px] w-full max-w-[1728px] items-center gap-[10px] px-4 sm:px-6 md:px-10 lg:px-14 xl:px-20 2xl:px-[200px]">
-              <span className="h-[4px] w-[4px] rounded-full bg-clementine" />
-              <Link href="/contact" className="text-[14px] font-serif text-coffee" onClick={closeMenu}>
+            <div className="mx-auto flex h-[60px] w-full max-w-[1180px] items-center border-x border-line-soft pl-0 pr-4 sm:px-6 md:px-8">
+              <span className="-ml-[8px] h-[5px] w-[5px] shrink-0 rounded-full bg-clementine" style={{background:'#cd5c1c',display:'inline-block'}} />
+              <span className="h-[32px] w-px bg-coffee/6 mx-4" />
+              <Link
+                href="/contact"
+                className="font-serif font-bold text-[15px] leading-none text-coffee"
+                onClick={closeMenu}
+              >
                 Request an Introduction →
               </Link>
             </div>
@@ -151,7 +158,7 @@ export function SiteHeader({ activePath = "/" }: SiteHeaderProps) {
                   {item.label === "Presence" ? (
                     <span className="inline-flex items-center gap-1.5">
                       <span>{item.label}</span>
-                      <span className="mt-0.5 h-[4px] w-[4px] rounded-full bg-clementine" />
+                      <span className="mt-0.5 h-[4px] w-[4px] rounded-full bg-clementine" style={{background:'#cd5c1c'}} />
                     </span>
                   ) : (
                     item.label
