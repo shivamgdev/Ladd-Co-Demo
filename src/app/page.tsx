@@ -96,7 +96,7 @@ export default function Home() {
 
         <section className="mx-auto grid w-full max-w-[1180px] gap-[10px] px-0 py-8 sm:px-6 md:grid-cols-[360px_1fr] md:px-7 md:py-0">
           {/* Desktop image with left lines */}
-          <div className="hidden sm:flex relative h-[420px] md:h-[560px] w-full max-w-[320px] md:max-w-[420px] ml-8">
+          <div className="hidden sm:flex relative h-[420px] md:h-[700px] w-full max-w-[320px] md:max-w-[420px] ml-8">
             {/* Left vertical lines - centered and lighter */}
             <div
               className="absolute left-[-36px] top-0 h-full flex flex-col items-center justify-center"
@@ -152,7 +152,7 @@ export default function Home() {
               alt="Sculptural architecture"
               width={320}
               height={500}
-              className="h-full w-full object-cover md:pt-8 md:pb-8"
+              className="h-[700px] w-full object-cover md:pt-8 md:pb-8"
             />
           </div>
           {/* Mobile number count and image */}
@@ -203,19 +203,13 @@ export default function Home() {
             <div className="mt-10 pb-1">
               <div className="ml-auto max-w-[500px] space-y-4 text-[16px] leading-[1.78] text-coffee/68">
                 <p>
-                  Our clients are individuals and families with significant
-                  wealth, complex international structures, and affairs that
-                  span multiple jurisdictions, advisors, and asset classes.
+                 Our clients are individuals and families with significant wealth, complex international structures, and affairs that span multiple jurisdictions, advisors, and asset classes.
                 </p>
                 <p>
-                  We do not manage assets. We do not sell financial products. We
-                  provide independent counsel and hands-on execution across the
-                  full spectrum of our clients&apos; private affairs.
+                  We do not manage assets. We do not sell financial products. We provide independent counsel and hands-on execution across the full spectrum of our clients' private affairs — from capital deployment and M&A to international structuring and the resolution of distressed or disputed matters.
                 </p>
                 <p>
-                  We work alongside our clients&apos; existing professional
-                  teams, identifying gaps, and resolving issues that fall
-                  between the cracks.
+                 We work alongside our clients' existing professional teams — their lawyers, accountants, bankers, and investment managers — ensuring alignment, identifying gaps, and resolving issues that fall between the cracks.
                 </p>
               </div>
             </div>
@@ -259,16 +253,16 @@ export default function Home() {
               {/* Double vertical lines for desktop, side by side with gap and dot above */}
               <div className="hidden md:flex flex-col items-center pt-0 pr-4">
                 <div className="flex flex-row items-start gap-3.5">
-                  <div className="w-[2px] h-[120px] md:h-[480px] bg-line-soft ml-7" />
+                  <div className="w-[1px] h-[120px] md:h-[480px] bg-line-soft ml-6" />
                   <span className="text-[13px] font-mono text-coffee/90 mt-16">
                     02
                   </span>
-                  <div className="w-[2px] h-[120px] md:h-[480px] bg-line-soft mr-16" />
+                  <div className="w-[1px] h-[120px] md:h-[480px] bg-line-soft mr-16" />
                 </div>
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-[0.2em] text-coffee/45"></p>
-                <h2 className="mt-2 font-serif text-[46px] leading-[1.02] text-coffee md:text-[64px] md:mt-12">
+                <p className="text-[12px] uppercase tracking-[0.2em] text-coffee/45 md:mt-12">SERVICES</p>
+                <h2 className="mt-2 font-serif text-[46px] leading-[1.02] text-coffee md:text-[64px] md:mt-4">
                   Advisory
                   <br />
                   &amp; Execution
@@ -404,7 +398,7 @@ export default function Home() {
 
             <div className="px-4 sm:px-0 border-line-soft md:grid md:grid-rows-[340px_auto] md:pl-8">
               <div className="flex flex-col justify-center">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-coffee/45"></p>
+                <p className="text-[12px] uppercase tracking-[0.2em] text-coffee/45">WHO WE SERVE</p>
                 <p className="mt-3 max-w-[760px] font-serif text-[34px] leading-[1.1] text-coffee/90 md:text-[46px] md:leading-[1.08]">
                   <span
                     style={{
@@ -553,6 +547,12 @@ export default function Home() {
           id="industries"
           className="mx-auto w-full max-w-[1180px] border-b border-line-soft px-4 py-6 sm:px-6 md:px-8 md:py-12"
         >
+         <span
+              className="text-[10px] uppercase tracking-[0.2em] text-coffee/45"
+              style={{ whiteSpace: "nowrap", marginBottom: "20px" }}
+            >
+             INDUSTRIES
+            </span>
           <div className="mt-2 grid gap-x-10 gap-y-4 md:grid-cols-3 lg:grid-cols-4">
             {industries.map((industry) => (
               <p
