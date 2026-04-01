@@ -398,7 +398,6 @@ export default function Home() {
                   width: "402px",
                   height: "408px",
                   opacity: 1,
-                  angle: "0deg",
                 }}
               />
             </div>
