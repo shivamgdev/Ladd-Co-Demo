@@ -37,16 +37,16 @@ export function SiteFooter() {
                   />
                   <span className="font-serif font-bold text-[15px] leading-none text-paper-white md:text-[16px] ml-12">Ladd &amp; Co.</span>
                 </div>
-                <p className="mt-5 max-w-[460px] text-[9px] uppercase leading-[2] tracking-[0.17em] text-clementine/95 md:ml-[-90px]">
+                <p className="mt-5 max-w-[460px] text-[9px] uppercase leading-[2] tracking-[0.17em] text-clementine/95 lg:ml-[-90px]">
                   Advisory and execution for families, principals, and private institutions with interests that demand discretion.
                 </p>
                 <Link
                   href="/contact"
-                  className="mt-8 inline-block text-[10px] uppercase tracking-[0.2em] text-paper-white/65 md:ml-[-90px]"
+                  className="mt-8 inline-block text-[10px] uppercase tracking-[0.2em] text-paper-white/65 lg:ml-[-90px]"
                 >
                   CLIENT LOGIN
                 </Link>
-                <div className="mt-16 flex items-center gap-5 text-[11px] uppercase tracking-[0.2em] text-paper-white/72 md:ml-[-90px]">
+                <div className="mt-16 flex items-center gap-5 text-[11px] uppercase tracking-[0.2em] text-paper-white/72 lg:ml-[-90px]">
                   <span>X</span>
                   <span>in</span>
                 </div>
