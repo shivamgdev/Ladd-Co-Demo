@@ -5,12 +5,54 @@ export const navItems = [
 ];
 
 export const serviceBlocks = [
-  "Co-Investment & Syndication",
-  "International Tax & Structuring",
-  "Debt Recovery & Asset Tracing",
-  "Dispute Advisory",
-  "Family Governance",
-  "Regulatory & Compliance",
+  {
+    title: "Capital Placement & Investment Advisory",
+    description: [
+      "Sourcing, structuring, and placing capital across private equity, real estate, venture, infrastructure, and direct investments. Full placement lifecycle from origination and due diligence through allocation and close."
+    ]
+  },
+  {
+    title: "Mergers, Acquisitions & Corporate Finance",
+    description: [
+      "Buy-side and sell-side advisory for privately held businesses, portfolio companies, and family enterprises. Transaction management, valuation, negotiation, and post-close coordination."
+    ]
+  },
+  {
+    title: "Co-Investment & Syndication",
+    description: [
+      "Origination and syndication of direct co-investment opportunities across our principal network. Deal structuring, capital formation, governance alignment, and investor relations."
+    ]
+  },
+  {
+    title: "International Tax & Structuring",
+    description: [
+      "Cross-border entity architecture, tax-efficient holding structures, estate and succession planning, and multi-jurisdictional compliance coordination across all relevant territories."
+    ]
+  },
+  {
+    title: "Debt Recovery & Asset Tracing",
+    description: "Recovery of distressed receivables, disputed assets, and misappropriated funds across jurisdictions, including asset tracing and enforcement."
+  },
+  {
+    title: "Dispute Advisory",
+    description: "Resolution of complex commercial disputes, shareholder conflicts, and litigation coordination."
+  },
+   {
+    title: "Family Governanace",
+    description: "Succession frameworks, governance structures, and next-generation preparation for family enterprises."
+   },
+   {
+    title: "Real Estate & Asset Structuring",
+    description: "Acquisition structuring for international property. Optimal jurisdiction, entity, and tax treatment."
+   },
+   {
+    title: "Banking & Treasury",
+    description: "Coordination of private banking relationships, treasury management, and lending facilities."
+   },
+   {
+    title: "Regulatory & Compliance",
+    description: "Licence management, AML/KYC coordination, and ongoing regulatory obligations across jurisdictions."
+   },
 ];
 
 export const clientCategories = [

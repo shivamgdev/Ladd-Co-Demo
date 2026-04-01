@@ -52,21 +52,21 @@ export function SiteHeader({ activePath = "/" }: SiteHeaderProps) {
                 priority
               />
             </span>
-            <span className="font-serif font-bold text-[17px] leading-none text-coffee md:text-[19px]">Ladd &amp; Co.</span>
+            <span className="font-serif font-bold text-[17px] leading-none text-coffee md:text-[16px]">Ladd &amp; Co.</span>
           </Link>
           <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
             {primaryNav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="font-mono text-[8px] uppercase tracking-[0.2em] text-coffee/58 transition-colors hover:text-clementine"
+                className="font-mono text-[13px] uppercase tracking-[0.2em] text-coffee/58 transition-colors hover:text-clementine"
               >
                 {item.label}
               </Link>
             ))}
             <Link
               href="/contact"
-              className={["font-mono text-[8px] font-semibold uppercase tracking-[0.2em]",activePath === "/contact" ? "text-clementine" : "text-coffee",].join(" ")}
+              className={["font-mono text-[13px] font-semibold uppercase tracking-[0.2em]",activePath === "/contact" ? "text-clementine" : "text-coffee",].join(" ")}
             >
               Client Login
             </Link>
@@ -91,7 +91,7 @@ export function SiteHeader({ activePath = "/" }: SiteHeaderProps) {
       <div className="border-t border-coffee/6 bg-[linear-gradient(90deg,#c5caaa_0%,#d3d8bd_22%,#e4e7d8_55%,#f3f1ef_100%)]">
         <div className="mx-auto flex h-[60px] w-full max-w-[1180px] items-center border-x border-line-soft px-4 sm:px-6 md:px-8">
           <div className={requestRailClass}>
-            <span className="-ml-[8px] h-[5px] w-[5px] shrink-0 rounded-full bg-clementine" />
+            <span className="-ml-[8px] h-[5px] w-[5px] shrink-0 bg-clementine" />
             <span className="h-[32px] w-px bg-coffee/6 mx-4" />
             <Link href="/contact" className="font-serif font-bold text-[15px] leading-none text-coffee">
               Request an Introduction →
@@ -133,7 +133,7 @@ export function SiteHeader({ activePath = "/" }: SiteHeaderProps) {
 
           <div className="border-t border-coffee/6 bg-[linear-gradient(90deg,#c5caaa_0%,#d3d8bd_22%,#e4e7d8_55%,#f3f1ef_100%)]">
             <div className="mx-auto flex h-[60px] w-full max-w-[1180px] items-center border-x border-line-soft pl-0 pr-4 sm:px-6 md:px-8">
-              <span className="-ml-[8px] h-[5px] w-[5px] shrink-0 rounded-full bg-clementine" style={{background:'#cd5c1c',display:'inline-block'}} />
+              <span className="-ml-[8px] h-[5px] w-[5px] shrink-0 bg-clementine" style={{background:'#cd5c1c',display:'inline-block'}} />
               <span className="h-[32px] w-px bg-coffee/6 mx-4" />
               <Link
                 href="/contact"
